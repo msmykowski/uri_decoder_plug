@@ -32,7 +32,7 @@ defmodule UriDecoderPlug do
   defp query(nil), do: ""
   defp query(query_string), do: query_string
 
-  defp path(nil), do: []
+  defp path(nil), do: {"", []}
   defp path(request_path) do
     path_info =
       request_path
